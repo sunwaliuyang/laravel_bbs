@@ -11,9 +11,11 @@
                 <img class="card-img-top" src="{{ $user->avatar }}" alt="{{ $user->name }}">
                 <div class="card-body">
                     <h5><strong>个人简介</strong></h5>
+                    {{--调用新增字段--}}
                     <p>{{ $user->introduction }}</p>
                     <hr>
                     <h5><strong>注册于</strong></h5>
+                    {{--时间戳友好显示--}}
                     <p>{{ $user->created_at->diffForHumans() }}</p>
                 </div>
             </div>
