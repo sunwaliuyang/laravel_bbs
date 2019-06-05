@@ -9,9 +9,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {{--csrf-token 获取csrf令牌--}}
     <title>@yield('title', 'LaraBBS') - Laravel 进阶教程</title>
-    <meta name="description" content="@yield('description', 'LaraBBS 爱好者社区')" />
+    <meta name="description" content="@yield('description', 'LaraBBS 爱好者社区。')" />
+    <meta name="keyword" content="@yield('keyword', 'LaraBBS,社区,论坛,开发者论坛')" />
+
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+
     @yield('styles')
 </head>
 <body>
@@ -26,6 +29,7 @@
 </div>
 <!-- Scripts -->
 <script src="{{ mix('js/app.js') }}"></script>
+
 @yield('scripts')
 {{--会根据webpack.mix.js的逻辑来生成css文件--}}
 </body>
